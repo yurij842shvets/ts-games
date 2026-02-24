@@ -1,0 +1,79 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+  background-color: #fff;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+body {
+  background-image: url(./assets/background.jpg);
+}
+.arrow {
+  width: 50px;
+  height: 2px;
+  background-color: #000;
+}
+.upper-left {
+  transform: rotate(-45deg);
+}
+.lower-left {
+  transform: translate(1px, 32px) rotate(45deg);
+}
+.flex {
+  display: flex;
+  justify-content: space-between;
+}
+.upper-right {
+  transform: rotate(45deg);
+}
+.lower-right {
+  transform: translate(1px, 32px) rotate(-45deg);
+}
+.card {
+  width: 110px;
+  height: 110px;
+  background-color: #CACACA;
+}
+.cards-wrapper {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  width: 800px;
+}
