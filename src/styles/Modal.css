@@ -1,0 +1,106 @@
+.modal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 576px;
+  height: 316px;
+  border: 1px solid black;
+  position: relative;
+}
+.modal-overlay {
+  position: fixed;      
+  top: 0;
+  left: 0;
+  width: 100vw;          
+  height: 100vh;        
+  background-color: rgba(0, 0, 0, 0.5); 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 576px;
+  height: 316px;
+  border: 1px solid black;
+  position: relative;
+  background-color: white; 
+  z-index: 1001;      
+}
+
+.modal-text {
+  color: #000;
+  text-align: center;
+  margin: 0 auto;
+}
+label {
+  color: #000;
+}
+.modal-input {
+  border-radius: 20px;
+  background-color: #b8b5b5;
+  width: 169px;
+  height: 35px;
+  color: #fff;
+}
+.modal-button {
+  border-radius: 20px;
+  background-color: #000;
+  color: #fff;
+  width: 105px;
+  height: 35px;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+.cross {
+  margin: 15px;
+  position: relative;
+
+}
+.sword {
+  position: absolute;
+  background-image: url(../assets/sword.png);
+  width: 30px;
+  height: 30px;
+  top: 130px;
+  left: 30px;
+}
+.puzzle {
+  position: absolute;
+  background-image: url(../assets/puzzle.png);
+  width: 30px;
+  height: 30px;
+  top: 200px;
+  left: 70px;
+}
+.tictactoe {
+  position: absolute;
+  background-image: url(../assets/tic-tac-toe.png);
+  width: 30px;
+  height: 30px;
+  top: 200px;
+  right: 120px;
+}
+.gamedev {
+  position: absolute;
+  background-image: url(../assets/game-development.png);
+  width: 30px;
+  height: 30px;
+  top: 130px;
+  right: 50px;
+}
+.modal-close {
+  background: transparent;
+  position: absolute;
+  top: -140px;
+  right: -10px;
+}

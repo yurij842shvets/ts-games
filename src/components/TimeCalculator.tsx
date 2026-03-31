@@ -1,4 +1,5 @@
 import { useState } from "react";
+import InputData from "./InputData/InputData";
 
 export default function TimeCalculator() {
   const [number, setNumber] = useState<number>(0);
@@ -14,10 +15,7 @@ export default function TimeCalculator() {
   return (
     <>
       <h2>Калькулятор часу</h2>
-      <input
-        type="number"
-        onChange={(e) => setNumber(Number(e.target.value))}
-      />
+      <InputData classNameInput="class_style" type="number" setData={setNumber} />
       <p>{convertTime(number)}</p>
     </>
   );

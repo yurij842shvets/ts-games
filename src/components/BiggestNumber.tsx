@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import InputData from "./InputData/InputData";
 
 export default function BiggestNumber() {
   const [firstNumber, setFirstNumber] = useState<number>(0);
@@ -13,18 +14,13 @@ export default function BiggestNumber() {
 
   return (
     <>
-      <input
-        type="number"
-        onChange={(e) => setFirstNumber(Number(e.target.value))}
-      />
-      <input
-        type="number"
-        onChange={(e) => setSecondNumber(Number(e.target.value))}
-      />
-      <input
-        type="number"
-        onChange={(e) => setThirdNumber(Number(e.target.value))}
-      />
+
+      <InputData classNameInput="class_style" type="number" setData={setFirstNumber}/>
+
+      <InputData classNameInput="class_style" type="number" setData={setSecondNumber}/>
+
+      <InputData classNameInput="class_style" type="number" setData={setThirdNumber}/>
+
 
       <p>Найбільше число, яке ви ввели - {result}</p>
     </>

@@ -1,4 +1,6 @@
 import { useState } from "react";
+import InputData from "./InputData/InputData";
+import ButtonData from "./ButtonData/ButtonData";
 
 export default function Calculator() {
   const [num1, setNum1] = useState<number>(0);
@@ -7,18 +9,25 @@ export default function Calculator() {
   const [result, setResult] = useState<string | number>("");
 
   function calculate() {
-    if (operator == "+") {
-      setResult(num1 + num2);
-    } else if (operator == "/") {
-      if (num2 === 0) {
-        setResult("Не можна ділити на 0");
-      } else {
-        setResult(num1 / num2);
-      }
-    } else if (operator == "*") {
-      setResult(num1 * num2);
-    } else if (operator == "-") {
-      setResult(num1 - num2);
+    switch (operator) {
+      case "+":
+        setResult(Math.round(num1 + num2));
+        break;
+      case "-":
+        setResult(Math.round(num1 - num2));
+        break;
+      case "*":
+        setResult(Math.round(num1 * num2));
+        break;
+      case "/":
+        if (num2 === 0) {
+          setResult("Не можна ділити на 0");
+        } else {
+          setResult(Math.round(num1 / num2));
+        }
+        break;
+      default:
+        setResult("");
     }
   }
 
@@ -26,14 +35,15 @@ export default function Calculator() {
     <>
       <h2>Калькулятор</h2>
 
-      <input type="number" onChange={(e) => setNum1(Number(e.target.value))} />
+      <InputData classNameInput="class_style" type="number" setData={setNum1} />
 
-      <button onClick={() => setOperator("+")}>+</button>
-      <button onClick={() => setOperator("-")}>-</button>
-      <button onClick={() => setOperator("*")}>*</button>
-      <button onClick={() => setOperator("/")}>/</button>
 
-      <input type="number" onChange={(e) => setNum2(Number(e.target.value))} />
+      <ButtonData classNameButton="button-style" setData={setOperator} operator="+" text="+"/>
+      <ButtonData classNameButton="button-style" setData={setOperator} operator="-" text="-"/>
+      <ButtonData classNameButton="button-style" setData={setOperator} operator="*" text="*"/>
+      <ButtonData classNameButton="button-style" setData={setOperator} operator="/" text="/"/>
+
+      <InputData classNameInput="class_style" type="number" setData={setNum2} />
 
       <button onClick={calculate}>=</button>
 

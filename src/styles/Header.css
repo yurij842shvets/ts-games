@@ -1,0 +1,14 @@
+header {
+  display: flex;
+  justify-content: space-around;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+a {
+    color: #807f7f;
+}

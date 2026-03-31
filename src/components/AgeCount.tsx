@@ -1,4 +1,5 @@
 import { useState } from "react";
+import InputData from "./InputData/InputData";
 
 export default function AgeCounter() {
   const [inputValue, setInputValue] = useState(0);
@@ -11,7 +12,7 @@ export default function AgeCounter() {
   return (
     <>
       <h2>Перевір в який рік ти народився</h2>
-      <input type="number" onChange={(e) => setInputValue(Number(e.target.value))} />
+      <InputData classNameInput="class_style" type="number" setData={setInputValue}/>
       <button onClick={() => calc(inputValue)}>submit</button>
       <p>{result}</p>
     </>
